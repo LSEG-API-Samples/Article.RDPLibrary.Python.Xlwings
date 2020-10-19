@@ -6,11 +6,13 @@
 
 ## <a id="overview"></a>Overview
 
-With rise of Data Scientist, Financial coder or Trader (aka Citizen Developers) and rapid growth of [Jupyter](https://jupyter.org/) application, the main target of every Citizen Developers are replace [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) with Jupyter (reference: [Jupyter is the new Excel](https://towardsdatascience.com/jupyter-is-the-new-excel-a7a22f2fc13a)). 
+With rise of Data Scientist, Financial coder or Trader (aka Citizen Developers) and rapid growth of [Jupyter](https://jupyter.org/) application, the main target of every Citizen Developers are replacing [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) with Jupyter application (reference: [Jupyter is the new Excel](https://towardsdatascience.com/jupyter-is-the-new-excel-a7a22f2fc13a)). 
 
-However, Excel is not obsolete and still important file format/application in the business. It is easy to distribute, non-IT people (especially your boss) can open it easily than setup Jupyter/Python environment. 
+However, Excel is not obsolete and still be an important file format/application in the business. It is easy to distribute and non-IT people (especially your boss) can open it easily than setup Jupyter/Python environment. 
 
-This example project is the first part of the series that demonstrate how to export financial data and report from Python/Jupyter application to Excel using xlwings CE and xlwings Pro libraries. to create an excel report file. The application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example data.
+This example project  is the first part of the series that demonstrate how to export financial data and report from Python/Jupyter application to Excel report file using xlwings CE and xlwings Pro libraries. The demo application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example data.
+
+*Note*: All figures and reports demonstrate Time-Series 90 days data queried on 14th October 2020.
 
 ## <a id="xlwings"></a>Introduction to xlwings
 
@@ -42,6 +44,14 @@ This demo project requires the following dependencies software.
 6. Internet connection.
 
 Please contact your Refinitiv's representative to help you to access Refinitiv Data Platform credentials. You can generate/manage the AppKey from [AppKeyGenerator web site](https://emea1.apps.cp.thomsonreuters.com/apps/AppkeyGenerator) or AppKey Generator tool in Eikon Desktop/Refinitiv Workspace application. 
+
+## <a id="application_files"></a>Project Application Files
+This example project contains the following files and folders
+1. *notebook_python/rdp_xlwingsce_notebook.ipynb*: The example RDP Libraries - xlwings CE Jupyter Notebook application file.
+2. *requirements.txt*: The project dependencies configuration file.
+3. *images*: Project images folder.
+3. *LICENSE.md*: Project's license file.
+4. *README.md*: Project's README file.
 
 ## <a id="running"></a>Running the Notebook example.
 1. Open Anaconda Prompt and go to project's folder
