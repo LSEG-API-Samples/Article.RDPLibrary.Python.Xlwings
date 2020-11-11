@@ -18,9 +18,11 @@ Please follow the following steps to set up xlwings VBA macro before proceed the
 1. https://docs.xlwings.org/en/stable/addin.html#xlwings-addin
 2. https://docs.xlwings.org/en/stable/vba.html#runpython
 
-Please make sure that your Excel file has set a correct Python or Conda environment. 
+Please make sure that your Excel file has enable xlwings VBA add-in and set a correct Python or Conda environment. 
 
-![Figure-1](../images/xlwings_runmain.png "xlwings run main") 
+![Figure-1](../images/xlwings_pro_vba_addin.png "xlwings vba add-in") 
+
+![Figure-2](../images/xlwings_runmain.png "xlwings run main") 
 
 ## How to enable xlwings PRO license
 
@@ -45,7 +47,7 @@ Please follow the step in this https://docs.xlwings.org/en/stable/installation.h
     app_key=bbb_example_client_id_ccc
     ```
 
-2. Back python_embedded folder and open *rdp_ipa_bond.py* file and change the following line to be an absolute path of your rdp.cfg file.
+2. Back to *python_embedded* folder and open *rdp_ipa_bond.py* file, then change the following line to be an absolute path of your rdp.cfg file.
     ```
     cfg_location = '<your machine folder>' + '\\rdp.cfg' # Change it to match your machine folder.
     ```

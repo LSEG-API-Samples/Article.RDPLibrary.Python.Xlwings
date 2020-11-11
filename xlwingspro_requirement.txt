@@ -91,6 +91,6 @@ webencodings==0.5.1
 websocket-client==0.57.0
 wincertstore==0.2
 wrapt==1.12.1
-xlwings==0.20.7
+xlwings==0.21.0
 zipp==3.3.0
 zope.interface==5.1.2
