@@ -12,7 +12,7 @@ However, Excel is not obsolete and still be an important file format/application
 
 This example project  is the first part of the series that demonstrate how to export financial data and report from Python/Jupyter application to Excel report file using xlwings CE and xlwings Pro libraries. The demo application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example data.
 
-*Note*: All figures and reports demonstrate Time-Series 90 days data queried on 14th October 2020.
+*Note*: All figures and reports in the *rdp_xlwingsce_notebook.ipynb* notebook demonstrate Time-Series 90 days data queried on 14th October 2020.
 
 ## <a id="xlwings"></a>Introduction to xlwings
 
@@ -33,14 +33,15 @@ For more deep detail regarding the RDP Libraries, please refer to the following 
 
 ### Disclaimer
 
-As these articles are based on alpha version 1.0.0.a5 of the Python library, the method signatures, data formats etc are subject to change.
+As these articles are based on alpha versions 1.0.0.a5 and 1.0.0.a7 of the Python library, the method signatures, data formats etc are subject to change.
 
 ## <a id="prerequisite"></a>Prerequisite
 This demo project requires the following dependencies software.
 1. RDP Access credentials.
-2. [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
-3. Python [Anaconda](https://www.anaconda.com/distribution/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html) distribution/package manager.
-4. [Classic Jupyter Notebook application ](https://jupyter.org/).
+2. [xlwings library](https://www.xlwings.org/) version 0.21.0 and above.
+3. [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
+4. Python [Anaconda](https://www.anaconda.com/distribution/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html) distribution/package manager.
+5. [Classic Jupyter Notebook application ](https://jupyter.org/).
 6. Internet connection.
 
 Please contact your Refinitiv's representative to help you to access Refinitiv Data Platform credentials. You can generate/manage the AppKey from [AppKeyGenerator web site](https://emea1.apps.cp.thomsonreuters.com/apps/AppkeyGenerator) or AppKey Generator tool in Eikon Desktop/Refinitiv Workspace application. 
@@ -101,7 +102,7 @@ This example project contains the following files and folders
 
 The xlwings CE library lets Python developers integrate data with Excel in a simple way. The library is suitable for a wide range of developers from casual coders, data scientists, professional traders to seasoned programmers, and allows them to work on data analysis and generate reports based on their skill. 
 
-At the same time, the [Refinitiv Data Platform (RDP) Libraries](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-libraries) gives developers rapid access to Refinitiv Platform content with just a few lines of code that are easy to understand and maintain. Developers can focus on implementing the business logic or analysing data without worrying about the connection and authentication details for the Refinitiv Platforms.
+At the same time, the [Refinitiv Data Platform (RDP) Libraries](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-libraries) gives developers rapid access to Refinitiv Platform content with just a few lines of code that are easy to understand and maintain. Developers can focus on implementing the business logic or analyzing data without worrying about the connection and authentication details for the Refinitiv Platforms.
 
 The integration between Refinitiv APIs and xlwings is not limited to only RDP Libraries. Any [Refinitiv API](https://developers.refinitiv.com/en/api-catalog?i=1;q1=page-type%3Aapi;q2=devportal%3Alanguages~2Fpython;sort=title;sp_c=12;sp_cs=UTF-8;sp_k=devportal-prod;view=xml;x1=w-page-type-id;x2=api-language) that supports Python such as [Eikon Data API](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) ([Eikon Data API-xlwings article](https://developers.refinitiv.com/en/article-catalog/article/financial-reporting-with-eikon-and-excel)), or [RKD API](https://developers.refinitiv.com/en/api-catalog/refinitiv-knowledge-direct/refinitiv-knowledge-direct-api-rkd-api) can work with xlwings using the same concept and code logic as this RDP Library notebook example. 
 
