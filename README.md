@@ -10,9 +10,11 @@ With rise of Data Scientist, Financial coder or Trader (aka Citizen Developers) 
 
 However, Excel is not obsolete and still be an important file format/application in the business. It is easy to distribute and non-IT people (especially your boss) can open it easily than setup Jupyter/Python environment. 
 
-This example project  is the first part of the series that demonstrate how to export financial data and report from Python/Jupyter application to Excel report file using xlwings CE and xlwings Pro libraries. The demo application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example data.
+This example project contains a series of Jupyter Notebook and Python console applications that demonstrate how to export financial data and report from Python/Jupyter application to Excel report file using xlwings CE and xlwings Pro libraries. The demo application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example data.
 
-*Note*: All figures and reports in the *rdp_xlwingsce_notebook.ipynb* notebook demonstrate Time-Series 90 days data queried on 14th October 2020.
+*Note*: 
+- All figures and reports in the *rdp_xlwingsce_notebook.ipynb* notebook demonstrate Time-Series 90 days data queried on 14th October 2020.
+- All figures and reports in the *part2_xlwings_pro_notebook.ipynb* notebook demonstrate Time-Series 90 days data queried on 13th November 2020.
 
 ## <a id="xlwings"></a>Introduction to xlwings
 
@@ -38,7 +40,7 @@ As these articles are based on alpha versions 1.0.0.a5 and 1.0.0.a7 of the Pytho
 ## <a id="prerequisite"></a>Prerequisite
 This demo project requires the following dependencies software.
 1. RDP Access credentials.
-2. [xlwings library](https://www.xlwings.org/) version 0.21.0 and above.
+2. [xlwings library](https://www.xlwings.org/) version 0.21.2 and above.
 3. [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
 4. Python [Anaconda](https://www.anaconda.com/distribution/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html) distribution/package manager.
 5. [Classic Jupyter Notebook application ](https://jupyter.org/).
@@ -49,12 +51,15 @@ Please contact your Refinitiv's representative to help you to access Refinitiv D
 ## <a id="application_files"></a>Project Application Files
 This example project contains the following files and folders
 1. *notebook_python/rdp_xlwingsce_notebook.ipynb*: The example RDP Libraries - xlwings CE Jupyter Notebook application file.
-2. *requirements.txt*: The project dependencies configuration file.
-3. *images*: Project images folder.
-3. *LICENSE.md*: Project's license file.
-4. *README.md*: Project's README file.
+2. *notebook_python/part2_xlwings_pro_notebook.ipynb*: The example RDP Libraries - xlwings PRO Jupyter Notebook application file.
+3. *python_embedded/rdp_ipa_bond.py* and *python_embedded/rdp_ipa_bond.xlsm*: The example RDP Libraries - xlwings Embedded Code application files.
+4. *requirements.txt*: The project xlwings CE dependencies configuration file.
+5. *xlwingspro_requirements.txt*: The project xlwings PRO dependencies configuration file.
+6. *images*: Project images folder.
+7. *LICENSE.md*: Project's license file.
+8. *README.md*: Project's README file.
 
-## <a id="running"></a>Running the Notebook example.
+## <a id="running"></a>Running the xlwings CE Notebook example.
 1. Open Anaconda Prompt and go to project's folder
 2. Run the following command in a Anaconda Prompt to create Conda environment named *xlwings_rdp* for the project.
     ```
@@ -96,24 +101,56 @@ This example project contains the following files and folders
 
     ![Figure-2](images/notebook_xlwings.png "Open the Notebook application") 
 
+## <a id="running_pro"></a>Running the xlwings PRO Notebook example.
+1. Open Anaconda Prompt and go to project's folder
+2. Run the following command in a Anaconda Prompt to create Conda environment named *xlwings_rdp* for the project.
+    ```
+    (base) $>conda create --name xlwingspro_rdp python=3.7
+    ```
+3. Once the environment is created, activate Conda environment named ```xlwings_rdp``` with this command in Anaconda Prompt
+    ```
+    (base) $>conda activate xlwingspro_rdp
+    ```
+4. Run the following command to install RDP Library for Python, xlwings CE and all dependencies in *xlwings_rdp* environment
+    ```
+    (xlwingspro_rdp) $>pip install -r xlwingspro_requirements
+    ```
+5. Follow the same steps as [Running the xlwings CE Notebook example](#running) to open Jupyter Notebook in the web browser.
+6. Open *part2_xlwings_pro_notebook.ipynb* Notebook document, then follow through each notebook cell.
+    ![Figure-3](images/notebook_xlwings_pro.png "Open the Notebook application") 
 
+## <a id="running_embedded"></a>Running the xlwings Embedded Code example.
+1. Setup *xlwingspro_rdp* environment as the steps in [Running the xlwings PRO Notebook example](#running_pro)
+2. Open *python_embedded* folder and follow through the [README.md](./python_embedded/README.md) file in the folder.
 
 ## <a id="conclusion"></a>Conclusion and Next Step
 
 The xlwings CE library lets Python developers integrate data with Excel in a simple way. The library is suitable for a wide range of developers from casual coders, data scientists, professional traders to seasoned programmers, and allows them to work on data analysis and generate reports based on their skill. 
 
+The newly introduced xlwings CCE ```to_pdf``` feature also lets developers export the Excel Workbook/Sheets to the PDF file. This function helps business users who do not have [Microsoft Office](https://www.office.com/) installed can still be able to open the PDF report file.
+
+The xlwings PRO Reports and Embedded Code features allow Python developers and business users work together to integrate data to Excel report file in much more easier than xlwings CE.
+
+The xlwings Reports help business and financial team design the report to match their business requirement freely. The Python developers/data engineers can focus on how to retrieve and optimize data without no need to worry about report design. xlwings Reports also helps developers can automate report generator process periodicity (such as daily, weekly or monthly report). 
+
+If users want dynamic data and charts in the report file, the xlwings Embedded Code feature lets users run Python code in the macro-enabled Excel report directly. Users does not need to run a separate Python code themselves or wait for Developers to generate a report file for them.
+
 At the same time, the [Refinitiv Data Platform (RDP) Libraries](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-libraries) gives developers rapid access to Refinitiv Platform content with just a few lines of code that are easy to understand and maintain. Developers can focus on implementing the business logic or analyzing data without worrying about the connection and authentication details for the Refinitiv Platforms.
 
-The integration between Refinitiv APIs and xlwings is not limited to only RDP Libraries. Any [Refinitiv API](https://developers.refinitiv.com/en/api-catalog?i=1;q1=page-type%3Aapi;q2=devportal%3Alanguages~2Fpython;sort=title;sp_c=12;sp_cs=UTF-8;sp_k=devportal-prod;view=xml;x1=w-page-type-id;x2=api-language) that supports Python such as [Eikon Data API](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) ([Eikon Data API-xlwings article](https://developers.refinitiv.com/en/article-catalog/article/financial-reporting-with-eikon-and-excel)), or [RKD API](https://developers.refinitiv.com/en/api-catalog/refinitiv-knowledge-direct/refinitiv-knowledge-direct-api-rkd-api) can work with xlwings using the same concept and code logic as this RDP Library notebook example. 
+The integration between Refinitiv APIs and xlwings is not limited to only RDP Libraries. Any [Refinitiv APIs](https://developers.refinitiv.com/en/api-catalog?i=1;q1=page-type%3Aapi;q2=devportal%3Alanguages~2Fpython;sort=title;sp_c=12;sp_cs=UTF-8;sp_k=devportal-prod;view=xml;x1=w-page-type-id;x2=api-language) that supports Python such as [Eikon Data API](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) ([Eikon Data API-xlwings article](https://developers.refinitiv.com/en/article-catalog/article/financial-reporting-with-eikon-and-excel)), or [RKD API](https://developers.refinitiv.com/en/api-catalog/refinitiv-knowledge-direct/refinitiv-knowledge-direct-api-rkd-api), or [DataStream Web Service - Python](https://developers.refinitiv.com/en/api-catalog/eikon/datastream-web-service/) can work with xlwings library using the same concept and code logic as this RDP Libraries notebook example.
 
 ## <a id="references"></a>References
 
 You can find more details regarding the Refinitiv Data Platform Libraries, xlwings and related technologies for this notebook from the following resources:
 * [Refinitiv Data Platform (RDP) Libraries](https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-libraries) on the [Refinitiv Developer Community](https://developers.refinitiv.com/) web site.
 * [Xlwings web site](https://www.xlwings.org/).
+* [Xlwings CE Document page](https://docs.xlwings.org/en/stable/).
+* [xlwings PRO page](https://www.xlwings.org/pro).
+* [xlwings PRO Document page](https://docs.xlwings.org/en/stable/pro.html).
+* [xlwings API Reference page](https://docs.xlwings.org/en/stable/api.html).
+* [xlwings Reports page](https://www.xlwings.org/reporting).
+* [xlwings Embedded Code page](https://docs.xlwings.org/en/stable/deployment.html#embedded-code).
 * [Financial Reporting with Eikon, xlwings and Excel](https://developers.refinitiv.com/en/article-catalog/article/financial-reporting-with-eikon-and-excel).
-* [Xlwings API Reference](https://docs.xlwings.org/en/stable/api.html).
-* [Xlwings Document page](https://docs.xlwings.org/en/stable/).
 * [RDP Libraries Quick Start Guide page](https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-libraries/quick-start).
 * [RDP Libraries Tutorial page](https://developers.refinitiv.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-platform-libraries/tutorials).
 * [Discover our Refinitiv Data Platform Library (part 1)](https://developers.refinitiv.com/en/article-catalog/article/discover-our-refinitiv-data-platform-library-part-1).
