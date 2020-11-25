@@ -1,6 +1,6 @@
 # How to integrate Financial Data from Refinitiv Data Platform to Excel with Xlwings
-- version: 1.0
-- Last update: October 2020
+- version: 1.2
+- Last update: November 2020
 - Environment: Windows
 - Prerequisite: [Access to RDP credentials](#prerequisite) and [xlwings](https://www.xlwings.org)
 
@@ -10,11 +10,11 @@ With the rise of Data Scientist, Financial coder or, Trader (aka Citizen Develop
 
 However, Excel is not obsolete and still be an important file format/application in the business. It is easy to distribute and non-IT people (especially your boss) can open it easily than setup Jupyter/Python environment. 
 
-This example project contains a series of Jupyter Notebook and Python console applications that demonstrate how to export financial data and report from Python/Jupyter application to Excel report file using xlwings CE and xlwings Pro libraries. The demo application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example of data.
+This example project contains a series of Jupyter Notebook and Python console applications that demonstrate how to export financial data and report from Python/Jupyter application to Excel report file using xlwings CE and xlwings PRO libraries. The demo application uses content from [Refinitiv Data Platform (RDP)](https://developers.refinitiv.com/refinitiv-data-platform/refinitiv-data-platform-apis) as an example of data.
 
 *Note*: 
-- All figures and reports in the *rdp_xlwingsce_notebook.ipynb* notebook demonstrate Time-Series 90 days data queried on 14th October 2020.
-- All figures and reports in the *part2_xlwings_pro_notebook.ipynb* notebook demonstrate Time-Series 90 days data queried on 13th November 2020.
+- All figures and reports in the *rdp_xlwingsce_notebook.ipynb* notebook demonstrate xlwings CE with Time-Series 90 days data queried on 14th October 2020.
+- All figures and reports in the *part2_xlwings_pro_notebook.ipynb* notebook demonstrate xlwings PRO with Time-Series 90 days data queried on 24th November 2020.
 
 ## <a id="xlwings"></a>Introduction to xlwings
 
@@ -35,12 +35,12 @@ For more deep detail regarding the RDP Libraries, please refer to the following 
 
 ### Disclaimer
 
-As these articles are based on alpha versions 1.0.0.a5 and 1.0.0.a7 of the Python library, the method signatures, data formats, etc are subject to change.
+As these articles have been tested on alpha versions 1.0.0.a5 and 1.0.0.a7 of the Python library, the method signatures, data formats, etc are subject to change.
 
 ## <a id="prerequisite"></a>Prerequisite
 This demo project requires the following dependencies software.
 1. RDP Access credentials.
-2. [xlwings library](https://www.xlwings.org/) version 0.21.2 and above.
+2. [xlwings library](https://www.xlwings.org/) version 0.21.3 and above.
 3. [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
 4. Python [Anaconda](https://www.anaconda.com/distribution/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html) distribution/package manager.
 5. [Classic Jupyter Notebook application ](https://jupyter.org/).
