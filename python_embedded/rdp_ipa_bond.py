@@ -25,7 +25,7 @@ You should save a text file with **filename** `rdp.cfg` having the following con
     password = YOUR_RDP_PASSWORD
     app_key = YOUR_RDP_APP_KEY
     
-This file should be readily available (e.g. in the current working directory) for the next steps.
+This file should be readily available for the next steps.
 """
 
 session = None
