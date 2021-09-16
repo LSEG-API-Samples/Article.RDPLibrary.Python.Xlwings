@@ -46,7 +46,7 @@ This demo project requires the following dependencies software.
 5. [Classic Jupyter Notebook application ](https://jupyter.org/).
 6. Internet connection.
 
-Please contact your Refinitiv's representative to help you to access Refinitiv Data Platform credentials. You can generate/manage the AppKey from the  [AppKeyGenerator web site](https://emea1.apps.cp.thomsonreuters.com/apps/AppkeyGenerator) or AppKey Generator tool in Eikon Desktop/Refinitiv Workspace application. 
+Please contact your Refinitiv's representative to help you to access Refinitiv Workspace/Eikon credentials. You can generate/manage the AppKey by follow the steps in Eikon Data API Quick Start page.
 
 ## <a id="application_files"></a>Project Application Files
 This example project contains the following files and folders
