@@ -1,6 +1,6 @@
 # How to integrate Financial Data from Refinitiv Data Platform to Excel with Xlwings
 - version: 1.2
-- Last update: November 2020
+- Last update: September 2021
 - Environment: Windows
 - Prerequisite: [Access to RDP credentials](#prerequisite) and [xlwings](https://www.xlwings.org)
 
