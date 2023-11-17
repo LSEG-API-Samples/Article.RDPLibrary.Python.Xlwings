@@ -1,8 +1,12 @@
 # How to integrate Financial Data from Refinitiv Data Platform to Excel with Xlwings
-- version: 1.2
-- Last update: September 2021
+- version: 1.3
+- Last update: November 2023
 - Environment: Windows
 - Prerequisite: [Access to RDP credentials](#prerequisite) and [xlwings](https://www.xlwings.org)
+
+## <a id="deprecated"></a>Project Deprecation
+
+This project is **deprecated and no longer maintained** due to using the legacy libraries. Please find new/updated project on the [How to integrate Financial Data from Data Library to Excel with Xlwings](https://github.com/LSEG-API-Samples/Article.RD.Python.Xlwings) repository that using the update-to-date xlwings version and strategic [Data Library for Python](https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-library-for-python).
 
 ## <a id="overview"></a>Overview
 
